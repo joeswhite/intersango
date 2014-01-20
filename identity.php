@@ -70,6 +70,7 @@ function upload_identity_doc($num, $uid)
     $dest = $dir . "/$dest";
 
     rename($source, $dest);
+//note:add in config variable here
     encrypt_file($dest, array('dooglus@gmail.com', 'aml@worldbitcoinexchange.com'));
     @unlink($dest);
 
